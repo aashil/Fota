@@ -65,7 +65,7 @@ c_run:
 	str		lr, [bl_return_addr]	; preserve return address
 
 	ldr		r0, [_key2]
-	ldrb		r0, [r0, 0]		; Menu Key
+	ldrb		r0, [r0, 7]		; VolUp Key
 	cmp		r0, 0
 	ldrne		r0, [s_atagcmdlineRM_a] ; quick and dirty address copy...
 	ldrne		r1, [s_atagcmdline_aa]
